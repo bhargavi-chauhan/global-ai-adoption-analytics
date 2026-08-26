@@ -41,22 +41,22 @@ The project uses a relational dataset covering company-level survey responses, a
 The final Power BI report contains four interactive analytical pages:
 
 ### 1. Executive Overview
-<img src="screenshots/1-executive_overview.png" alt="Executive Overview Dashboard" width="50%" height="50%">
+<img src="screenshots/1_Executive_Overview.png" alt="Executive Overview Dashboard" width="50%" height="50%">
 
 High-level view of the global adoption landscape. 10,000 companies, 36.41% average AI adoption rate, 9.27% average productivity change, 4.61% average revenue growth, 4.81% average cost reduction, and a net workforce impact of +977K jobs. Both adoption and productivity trend steadily upward from 2023 to 2026 (33.50% → 39.24% adoption; 8.53% → 10.00% productivity change). Enterprises outperform SMEs and Startups on productivity gains (12.08% vs 8.92% vs 8.20%).
 
 ### 2. AI Adoption & Business Impact
-<img src="screenshots/2-ai_adoption_business_impact.png" alt="AI Adoption & Business Impact Dashboard" width="50%" height="50%">
+<img src="screenshots/2_AI Adoption_&_Business Impact.png" alt="AI Adoption & Business Impact Dashboard" width="50%" height="50%">
 
 Answers whether higher adoption actually corresponds to better outcomes. Technology leads all industries on both adoption (42.47%) and productivity change (11.17%). Productivity climbs sharply and consistently with adoption stage — from 2.39% (none) to 6.17% (pilot) to 12.03% (partial) to 19.79% (full). Primary AI tool choice makes only a marginal difference (9.09%–9.47% productivity change across GitHub Copilot, Claude, ChatGPT, Gemini, and custom internal tools) — no single tool stands out as a clear driver.
 
 ### 3. Workforce Impact
-<img src="screenshots/3-workforce_impact.png" alt="Workforce Impact Dashboard" width="50%" height="50%"> 
+<img src="screenshots/3_Workforce_Impact.png" alt="Workforce Impact Dashboard" width="50%" height="50%"> 
 
 17.68M jobs created, 16.71M jobs displaced, a net impact of +977K jobs, and 27.25M employees reskilled. The net-impact story is not uniform: Technology (+323,747), Finance (+241,647), and Healthcare (+176,667) show the strongest net job gains, while Manufacturing (−69,374), Retail (−68,995), and Logistics (−63,565) show net job losses. Job creation and displacement both scale sharply with adoption stage — full-adoption companies create ~54x more jobs on average than non-adopters (438.5 vs 8.1), but displace proportionally as well (396.2 vs 13.5).
 
 ### 4. Country & Industry Analysis
-<img src="screenshots/4-country_industry_analysis.png" alt="Country & Industry Analysis Dashboard" width="50%" height="50%"> 
+<img src="screenshots/4_Country_&_Industry Analysis.png" alt="Country & Industry Analysis Dashboard" width="50%" height="50%"> 
 
 Connects company-level outcomes to national context. Australia, Singapore, and the USA lead country-level adoption (39.9%, 39.3%, 39.2%), all under Moderate policy regimes. Digital maturity index shows a loose positive association with adoption rate but no tight linear relationship — several Lenient-policy, mid-digital-maturity countries (Colombia, Vietnam, Indonesia) still post above-average adoption. Country AI policy strictness (Strict/Moderate/Lenient) shows only a modest difference in average adoption, suggesting policy environment alone is not a strong standalone predictor.
 
