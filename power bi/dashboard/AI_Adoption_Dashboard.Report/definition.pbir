@@ -1,8 +1,0 @@
-{
-  "version": "4.0",
-  "datasetReference": {
-    "byPath": {
-      "path": "../ai_adoption_dshboard.SemanticModel"
-    }
-  }
-}
