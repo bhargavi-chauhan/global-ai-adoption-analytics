@@ -1,0 +1,89 @@
+table country_ai_index
+	lineageTag: e679b079-7f35-490f-8511-95ff0abcac47
+
+	column country
+		dataType: string
+		lineageTag: 9653c61c-33f2-42c4-9c40-2fd33fbfd404
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: f7e3543b-78b0-477d-9749-1148872bb85b
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column gdp_per_capita
+		dataType: double
+		lineageTag: 9531da29-f8fc-4c8d-8b06-f62a29147831
+		summarizeBy: none
+		sourceColumn: gdp_per_capita
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column internet_penetration
+		dataType: double
+		lineageTag: 0a52ec57-e210-4888-9a13-fd90838d16e8
+		summarizeBy: none
+		sourceColumn: internet_penetration
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column digital_maturity_index
+		dataType: double
+		lineageTag: 3cb1507e-055b-4325-aff8-58472eb46777
+		summarizeBy: none
+		sourceColumn: digital_maturity_index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column country_ai_policy
+		dataType: string
+		lineageTag: ef0150b2-e849-4304-bfd0-d040dc7035b2
+		summarizeBy: none
+		sourceColumn: country_ai_policy
+
+		annotation SummarizationSetBy = Automatic
+
+	column ai_patent_filings_2024
+		dataType: int64
+		formatString: 0
+		lineageTag: a64d0e4b-8236-45ce-a275-9521ee7b45e6
+		summarizeBy: none
+		sourceColumn: ai_patent_filings_2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column ai_researchers_per_million
+		dataType: double
+		lineageTag: 06e097ec-108f-4ae7-b412-70526334f289
+		summarizeBy: none
+		sourceColumn: ai_researchers_per_million
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition country_ai_index = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3306", "ai_adoption_analysis", [ReturnSingleDatabase=true]),
+				    ai_adoption_analysis_country_ai_index = Source{[Schema="ai_adoption_analysis",Item="country_ai_index"]}[Data]
+				in
+				    ai_adoption_analysis_country_ai_index
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

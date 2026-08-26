@@ -1,0 +1,8 @@
+relationship AutoDetected_7d6187bf-ea1c-4803-b97f-bf471f50eab1
+	fromColumn: ai_company_adoption.country
+	toColumn: country_ai_index.country
+
+relationship AutoDetected_c1e33e8a-4ee3-44d3-831f-5842e225ca5e
+	fromColumn: ai_company_adoption.industry
+	toColumn: ai_industry_summary.industry
+

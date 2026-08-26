@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "230c38ff63eae7fdc3c1",
+  "position": {
+    "x": 1330,
+    "y": 180,
+    "z": 1000,
+    "height": 900,
+    "width": 573.33333333333337,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_industry_summary"
+                    }
+                  },
+                  "Property": "industry"
+                }
+              },
+              "queryRef": "ai_industry_summary.industry",
+              "nativeQueryRef": "industry",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg Revenue Growth"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg Revenue Growth",
+              "nativeQueryRef": "Avg Revenue Growth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg Cost Reduction"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg Cost Reduction",
+              "nativeQueryRef": "Avg Cost Reduction"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ai_company_adoption"
+                  }
+                },
+                "Property": "Avg Revenue Growth"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Business Outcomes by Industry'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

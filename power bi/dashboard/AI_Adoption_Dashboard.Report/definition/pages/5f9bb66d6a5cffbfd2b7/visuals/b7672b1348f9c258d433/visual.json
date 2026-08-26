@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b7672b1348f9c258d433",
+  "position": {
+    "x": 462,
+    "y": 180,
+    "z": 0,
+    "height": 530,
+    "width": 852,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_industry_summary"
+                    }
+                  },
+                  "Property": "industry"
+                }
+              },
+              "queryRef": "ai_industry_summary.industry",
+              "nativeQueryRef": "industry"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ai_company_adoption"
+                        }
+                      },
+                      "Property": "company_id"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(ai_company_adoption.company_id)",
+              "nativeQueryRef": "Count of company_id"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg AI Adoption"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg AI Adoption",
+              "nativeQueryRef": "Avg AI Adoption",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg Productivity Change"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg Productivity Change",
+              "nativeQueryRef": "Avg Productivity Change"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AI Adoption vs Productivity by Industry'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
