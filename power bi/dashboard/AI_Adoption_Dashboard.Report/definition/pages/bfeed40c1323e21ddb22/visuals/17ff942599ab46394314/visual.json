@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "17ff942599ab46394314",
+  "position": {
+    "x": 437.77777777777777,
+    "y": 172.22222222222223,
+    "z": 1000,
+    "height": 618,
+    "width": 808,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "country_ai_index"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "country_ai_index.country",
+              "nativeQueryRef": "country"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "country_ai_index"
+                    }
+                  },
+                  "Property": "digital_maturity_index"
+                }
+              },
+              "queryRef": "country_ai_index.digital_maturity_index",
+              "nativeQueryRef": "digital_maturity_index",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg AI Adoption"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg AI Adoption",
+              "nativeQueryRef": "Avg AI Adoption"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Digital Maturity vs AI Adoption'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "03aa0d80b39e45a5ee3e",
+  "position": {
+    "x": 17.5,
+    "y": 431.66666666666669,
+    "z": 2000,
+    "height": 635.83333333333337,
+    "width": 430,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "ai_adoption_stage"
+                }
+              },
+              "queryRef": "ai_company_adoption.ai_adoption_stage",
+              "nativeQueryRef": "ai_adoption_stage",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg Productivity Change"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg Productivity Change",
+              "nativeQueryRef": "Avg Productivity Change"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ai_company_adoption"
+                  }
+                },
+                "Property": "Avg Productivity Change"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Productivity by AI Adoption Stage'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

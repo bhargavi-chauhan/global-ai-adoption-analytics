@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "0095dd438d8a55a1475c",
+  "position": {
+    "x": 15.555555555555555,
+    "y": 425.55555555555554,
+    "z": 2000,
+    "height": 642.22222222222217,
+    "width": 410,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "country_ai_index"
+                    }
+                  },
+                  "Property": "country_ai_policy"
+                }
+              },
+              "queryRef": "country_ai_index.country_ai_policy",
+              "nativeQueryRef": "country_ai_policy",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ai_company_adoption"
+                    }
+                  },
+                  "Property": "Avg AI Adoption"
+                }
+              },
+              "queryRef": "ai_company_adoption.Avg AI Adoption",
+              "nativeQueryRef": "Avg AI Adoption"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ai_company_adoption"
+                  }
+                },
+                "Property": "Avg AI Adoption"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AI Adoption by Policy Environment'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
